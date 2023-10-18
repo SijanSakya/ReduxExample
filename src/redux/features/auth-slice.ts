@@ -36,8 +36,11 @@ export const auth = createSlice({
         },
       };
     },
+    moderator : (state)=>{
+      state.value.isModerator =!state.value.isModerator
+    }
   },
 });
 
-export const {login ,logout} = auth.actions;
+export const {login ,logout, moderator} = auth.actions;
 export default auth.reducer;
