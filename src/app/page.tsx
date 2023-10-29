@@ -18,8 +18,8 @@ export default function Home() {
     <div className="p-10 flex gap-10 ">
         <Card>
 
-        <Card.Title>Redux Toolkit</Card.Title>
-        <Card.Price>39.00$</Card.Price>
+        <Card.Title>Shoe</Card.Title>
+        <Card.Price>Rs 2400</Card.Price>
         <Card.CartButton>Add To Cart</Card.CartButton>
       </Card>
 
