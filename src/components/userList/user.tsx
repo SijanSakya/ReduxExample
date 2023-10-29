@@ -5,14 +5,17 @@ import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import Link from "next/link";
 // import { userList } from "@/data/userList";
-import { deleteUser} from '@/redux/features/user-slice'
+import { deleteUser,editUser } from '@/redux/features/user-slice'
 import { useAppSelector } from "@/redux/hook";
 import Create from "./create";
+
 
 const User = () => {
   const user =useAppSelector((state) => state.userReducer);
   const [showBox, setShowBox] = useState(false);
 
+
+ 
 
   const dispatch = useDispatch<AppDispatch>()
   const onClickBtn = () => {
@@ -22,6 +25,8 @@ const User = () => {
   const handleDelete = (userId: number) => {
     dispatch(deleteUser(userId));
   }
+  
+ 
   const messageBox = () => {
     setShowBox(!showBox);
   };
@@ -72,7 +77,7 @@ const User = () => {
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>
-                  <Link  href="./userList/updateForm" type="button" className="border-2 border-black/50 mx-2 px-2 py-1">Edit</Link>
+                  <Link  href={`./userList/updateForm/${user.id}`} type="button" className="border-2 border-black/50 mx-2 px-2 py-1">Edit</Link>
                   <button type="button" onClick={()=>handleDelete(user.id)} className="border-2 border-black/50 px-2 py-1">Delete</button>
                 </td>
               </tr>

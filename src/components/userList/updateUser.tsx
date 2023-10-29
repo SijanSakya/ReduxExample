@@ -5,11 +5,15 @@ import { AppDispatch } from "@/redux/store";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
+import { useParams } from 'next/navigation'
 
 const UpdateUser = () => {
   const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+
+  const params = useParams()
+ 
 
   const users = useAppSelector((state) => state.userReducer);
 
@@ -23,6 +27,7 @@ const UpdateUser = () => {
   };
   return (
     <div>
+       
         <h1 className="text-center">Edit user detail</h1>
       <form onSubmit={handleSubmit} className="flex flex-col px-44 py-20 gap-4">
         

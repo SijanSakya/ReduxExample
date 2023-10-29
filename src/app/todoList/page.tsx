@@ -8,7 +8,7 @@ function TodoList() {
   // const text = useAppSelector((state) => state.todoReducer.value.text);
   return (
     <div>
-       {/* <Todo List= {text}/> */}
+       <Todo/>
     </div>
   )
 }

@@ -1,24 +1,38 @@
 "use client"
-import Counter from "@/components/counter";
-import Login from "@/components/login";
-import { useAppSelector } from "@/redux/hook";
-// import { useAppSelector } from "@/redux/store";
-import Image from "next/image";
-import { useSelector } from "react-redux";
+import { Card } from "@/components/card/Card";
+import { Product } from "../../types";
+// import useProduct from '../../useProduct';
+import ProductCard from "@/components/ProductCard/ProductCard";
+import img1 from "/images/img1.jpg"
+
+const product: Product = {
+  id: 1,
+  image: "/images/img1.jpg" ,
+  title: 'Apple watch series 7gps ,Aluminum case ,Starlight sports',
+  price: 79500,
+};
+
 
 export default function Home() {
-  const username = useAppSelector((state) => state.authReducer.value.username);
-  const moderator = useAppSelector((state) => state.authReducer.value.isModerator);
-  const isAuth = useAppSelector((state) => state.authReducer.value.isAuth);
-  const value = useAppSelector((state) => state.counterReducer.value);
- 
   return (
-    <div>
-        <Login />
-       <h1>Username:{username}</h1>
-        {moderator && <p>This user is moderator</p>  }
+    <div className="p-10 flex gap-10 ">
+        <Card>
 
-        <Counter value={value}/>
+        <Card.Title>Redux Toolkit</Card.Title>
+        <Card.Price>39.00$</Card.Price>
+        <Card.CartButton>Add To Cart</Card.CartButton>
+      </Card>
+
+      <ProductCard
+      product={product}
+      image={<ProductCard.Image />}
+      title={<ProductCard.Title />}
+      price={ <ProductCard.Price /> }
+      action={ <ProductCard.Button>Add to cart</ProductCard.Button> }
+
+    />
+
+      
        
       
     </div>

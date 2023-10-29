@@ -1,33 +1,32 @@
-
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-type InitialState = [];
-  
-  type TodoState = {
-    
-    text: string;
-    uid: string;
-    
-   
-  };
-  const initialState = {
-      value: {
-          text: "",
-          uid: "",
-      } as TodoState,
-  } as unknown as InitialState;
-  
-  export const todo = createSlice({
-    name: "Todo",
-    initialState,
-    reducers: {
-      Delete: () => {
-        return initialState;
-      },
-     
-     
+type TodoState = {
+  text: string;
+  id: number;
+};
+
+type InitialState = {
+  value: TodoState;
+};
+const initialState: TodoState[] = [];
+
+export const todo = createSlice({
+  name: "Todo",
+  initialState,
+  reducers: {
+    addData: (state, action: PayloadAction<TodoState>) => {
+      state.push(action.payload);
     },
-  });
-  
-export const { Delete} = todo.actions;
+    deleteData :(state , action:  PayloadAction<number>)=>{
+        return state.filter(text => text.id !== action.payload);
+    },
+    // editUser: (state, action: PayloadAction<UserState>) => {
+    //     const index = state.findIndex(user => user.id === action.payload.id);
+    //     if (index !== -1) {
+    //         state[index] = action.payload;
+    //     }
+  },
+});
+
+export const { addData , deleteData } = todo.actions;
 export default todo.reducer;
