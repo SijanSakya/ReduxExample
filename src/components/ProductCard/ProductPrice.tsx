@@ -8,7 +8,7 @@ type Props = {
 function ProductPrice() {
   const { product } = useProductCardContext();
   return (
-    <div className="flex justify-center text-2xl">
+    <div className="flex justify-center text-2xl uppercase">
       Rs {product.price}
     </div>
   );

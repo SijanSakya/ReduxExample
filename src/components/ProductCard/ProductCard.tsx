@@ -42,4 +42,10 @@ ProductCard.Title = ProductTitle;
 ProductCard.Info = ProductInfo;
 ProductCard.Price = ProductPrice;
 
+{/* <Card>
+
+<Card.Title>Shoe</Card.Title>
+<Card.Price>Rs 2400</Card.Price>
+<Card.CartButton>Add To Cart</Card.CartButton>
+</Card> */}
 export default ProductCard;

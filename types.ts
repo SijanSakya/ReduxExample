@@ -4,4 +4,4 @@ export type Product = {
     title: string;
     price: number;
   };
-  
+  // export type Product = Product[];
