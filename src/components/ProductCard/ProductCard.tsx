@@ -11,7 +11,7 @@ import ProductButton from './ProductCardButton';
 
 
 type Props = {
-  product: Product;
+  product: Product[];
   image?: ReactNode;
   title?: ReactNode;
   price?: ReactNode;

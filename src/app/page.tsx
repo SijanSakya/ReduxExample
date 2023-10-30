@@ -26,9 +26,9 @@ export default function Home() {
         <ProductCard
           key={product.id}
           product={product}
-          image={<ProductCard.Image src={product.image} />} 
-          title={<ProductCard.Title>{product.title}</ProductCard.Title>}
-          price={<ProductCard.Price>Rs {product.price}</ProductCard.Price>}
+          image={<ProductCard.Image/>} 
+          title={<ProductCard.Title />}
+          price={<ProductCard.Price />}
           action={<ProductCard.Button>Add to cart</ProductCard.Button>}
         />
       ))}
