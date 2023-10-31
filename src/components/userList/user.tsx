@@ -10,7 +10,7 @@ import { useAppSelector } from "@/redux/hook";
 import Create from "./create";
 
 
-const User = ({data}) => {
+const User = ({data}:{data:any}) => {
   
   const user =useAppSelector((state) => state.userReducer);
   const [showBox, setShowBox] = useState(false);

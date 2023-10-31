@@ -17,7 +17,7 @@ const TableData: React.FC<TableProps> = ({ columns, data }) => {
   } = useTable({ columns, data });
   return (
     <div>
-      <div className="container">
+      <div className="">
         <table {...getTableProps()}>
           <thead>
             {headerGroups.map((headerGroup) => (

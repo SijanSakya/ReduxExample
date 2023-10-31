@@ -32,7 +32,7 @@ const product: Product[] = [
 ];
 
 
-export default function Home({data}:{data:ReactNode}) {
+export default function Home({data}:{data:any}) {
 
 
   
