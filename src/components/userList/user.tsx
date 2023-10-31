@@ -10,12 +10,13 @@ import { useAppSelector } from "@/redux/hook";
 import Create from "./create";
 
 
-const User = () => {
+const User = ({data}) => {
+  
   const user =useAppSelector((state) => state.userReducer);
   const [showBox, setShowBox] = useState(false);
 
 
- 
+  console.log(data)
 
   const dispatch = useDispatch<AppDispatch>()
   const onClickBtn = () => {

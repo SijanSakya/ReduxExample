@@ -7,7 +7,7 @@ export type Props = {
 };
 
 function ProductInfo({ children }: Props) {
-    const { product } = useProductCardContext();
+    // const { product } = useProductCardContext();
 
   return <div className="flex flex-col gap-1">{children}</div>;
 }

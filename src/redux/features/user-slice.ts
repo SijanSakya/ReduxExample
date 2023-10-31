@@ -28,10 +28,10 @@ export const user = createSlice({
         if (index !== -1) {
             state[index] = action.payload;
         }
-  }
+        
 },
   
-});
+}});
 
 export const {addUser , deleteUser , editUser} = user.actions;
 export default user.reducer;

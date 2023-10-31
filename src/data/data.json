@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "first_name": "Millicent",
+      "last_name": "Whatham",
+      "email": "mwhatham0@comsenz.com",
+      "Age": 45
+      
+    },
+    {
+      "id": 2,
+      "first_name": "Siward",
+      "last_name": "Amberger",
+      "email": "samberger1@behance.net",
+      "Age": 56
+    
+    },
+    {
+      "id": 3,
+      "first_name": "Sheree",
+      "last_name": "Madeley",
+      "email": "smadeley2@google.com",
+      "Age": 43
+      
+    },
+    {
+      "id": 4,
+      "first_name": "Egor",
+      "last_name": "Downing",
+      "email": "edowning3@nymag.com",
+      "Age": 23
+   
+    },
+    {
+      "id": 5,
+      "first_name": "Donn",
+      "last_name": "Wilce",
+      "email": "dwilce4@answers.com",
+      "Age": 13
+
+    },
+    {
+      "id": 6,
+      "first_name": "Kenon",
+      "last_name": "Jersch",
+      "email": "kjersch5@youtu.be",
+      "Age": 12
+    
+    }
+]

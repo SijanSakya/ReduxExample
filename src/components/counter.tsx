@@ -7,6 +7,7 @@ interface counterProps{
     value: number
 }
 const Counter:React.FC<counterProps> = ({value}) => {
+
     
     const dispatch = useDispatch<AppDispatch>()
     const add =()=>{
@@ -21,12 +22,14 @@ const Counter:React.FC<counterProps> = ({value}) => {
   return (
     <div className='flex flex-col'>
         <div className='flex gap-3 '>
+            
         <button type='button' onClick={sub}>-</button>
         {value}
         <button type='button' onClick={add}>+</button>
 
         </div>
         <button type='button' onClick={resetValue}>Reset</button>
+      
 
         
     </div>

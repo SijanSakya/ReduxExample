@@ -3,6 +3,10 @@ import { useProductCardContext } from './ProductCardContext';
 
 import Image from "next/image";
 
+// type ProductProps ={
+//   product: any
+// }
+
 function ProductImage() {
   const { product } = useProductCardContext();
   return (

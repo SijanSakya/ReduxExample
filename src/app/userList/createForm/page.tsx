@@ -1,10 +1,13 @@
 import Create from '@/components/userList/create'
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-const CreateForm = () => {
+const CreateForm = ({data}:{data:ReactNode}) => {
+     
+ 
   return (
     <div>
         <Create />
+        {/* {(data) => <Create data={data} />} */}
     </div>
   )
 }
