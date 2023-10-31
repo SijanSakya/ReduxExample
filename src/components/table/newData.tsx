@@ -28,6 +28,7 @@ const NewData = () => {
       ],
       []
     );
+
     
   return (
     <div>

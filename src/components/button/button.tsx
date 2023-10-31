@@ -4,6 +4,8 @@ type ButtonProps ={
 }
 const ButtonChange:React.FC<ButtonProps> = ({data}) => {
    
+
+
     console.log(data.name)
   const [color, setColor] = useState("");
 
